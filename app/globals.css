@@ -1,0 +1,31 @@
+:root{--bg:#0a1f26;--panel:#0f2e39;--accent:#2c8f7b;--accent-2:#7cc7b4;--text:#e6f1f3;--muted:#93b1bd;--warn:#ffd166}
+*{box-sizing:border-box}
+html,body{padding:0;margin:0;height:100%;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
+body{display:flex;min-height:100vh}
+
+.container{display:grid;grid-template-columns:2fr 1fr;gap:16px;padding:16px;width:100%}
+.mainPanel{background:var(--panel);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.header{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#0b3d4f}
+.headerTitle{font-size:20px;font-weight:700;letter-spacing:.3px}
+.headerRight{display:flex;gap:8px;align-items:center}
+.badge{background:var(--accent);color:#0b1a1f;padding:4px 10px;border-radius:999px;font-weight:700;font-size:12px}
+.progressWrap{padding:8px 16px;background:#0c2731}
+.progress{height:10px;background:#0a1f26;border-radius:8px;overflow:hidden}
+.progress>span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));transition:width .6s ease}
+.map{flex:1;min-height:400px;position:relative}
+.sidebar{display:grid;gap:16px}
+.card{background:var(--panel);border-radius:16px;padding:16px}
+.card h3{margin:0 0 8px 0;font-size:14px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase}
+.bigMetric{font-size:40px;font-weight:800;letter-spacing:.5px}
+.metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stationList{display:flex;flex-direction:column;gap:8px}
+.stationItem{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:#0c2731;border-radius:10px}
+.stationItem span{font-weight:600}
+.fact{font-size:16px;line-height:1.4;color:var(--text)}
+.footer{display:flex;justify-content:space-between;align-items:center;margin-top:12px;color:var(--muted)}
+.btn{background:#0b3d4f;color:var(--text);border:1px solid #124d62;border-radius:10px;padding:8px 12px;cursor:pointer}
+.btn:focus{outline:3px solid #2c8f7b;outline-offset:2px}
+.modalBackdrop{position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center}
+.modal{background:var(--panel);border:1px solid #124d62;border-radius:16px;padding:20px;max-width:520px;width:92%}
+.small{font-size:12px;color:var(--muted)}
+@media (max-width: 960px){.container{grid-template-columns:1fr}.map{min-height:320px}}
